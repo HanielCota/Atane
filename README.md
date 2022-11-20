@@ -7,7 +7,7 @@
   <br>
 </h1>
 
-<h4 align="center">Plugin for minecraft server in order to optimize your server<a href="http:/ankares.com" target="_blank">HanielFialho</a>.</h4>
+<h4 align="center">Plugin for minecraft server in order to optimize your server<a href="http:/ankares.com" target="_blank"> Atane</a>.</h4>
 
 <p align="center">
   <a href="https://badge.fury.io/js/electron-markdownify">
@@ -18,7 +18,7 @@
   <a href="https://saythanks.io/to/bullredeyes@gmail.com">
       <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
   </a>
-  <a href="https://www.paypal.me/AmitMerchant">
+  <a href="https://www.paypal.me/HanielFialho">
     <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
   </a>
 </p>
