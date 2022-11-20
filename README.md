@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://github.com/HanielCota/Atane/blob/main/logo.png" alt="Atane" width="900"></a>
+  <a href="http://ankares.com"><img src="https://github.com/HanielCota/Atane/blob/main/logo.png" alt="Atane" width="950"></a>
   <br>
   Atane
   <br>
