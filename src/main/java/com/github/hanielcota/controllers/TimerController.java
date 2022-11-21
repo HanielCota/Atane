@@ -6,7 +6,7 @@ import org.bukkit.Bukkit;
 import java.util.logging.Level;
 
 public class TimerController {
-    private int timer = 10;
+    private int timer = 420;
 
     public int getTimer() {
         return timer;

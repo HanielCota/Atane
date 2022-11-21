@@ -5,7 +5,6 @@ import com.github.hanielcota.misc.ClickMessage;
 import com.github.hanielcota.misc.sendMessage;
 import net.md_5.bungee.api.chat.ClickEvent;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.stream.IntStream;
@@ -17,15 +16,13 @@ public class AsyncRunnable extends BukkitRunnable {
     @Override
     public void run() {
         IntStream.of(30, 15, 10).filter(i -> controller.getTimer() == i).forEach(i -> {
-            for (Player player : Bukkit.getOnlinePlayers()) {
+            Bukkit.getOnlinePlayers().forEach(player -> {
                 sendMessage.sendMessageWithSound(player, "\n§c Atane vai executar uma limpeza em " + controller.getTimer() + " segundos.");
-                new ClickMessage(" §fConfira clicando ").then("§f§lAQUI").click(ClickEvent.Action.RUN_COMMAND, "/atane info").then(" §fsobre a última limpeza. \n").send(player);
-            }
+                new ClickMessage(" §fConfira clicando ").then("§f§lAQUI").tooltip("§fComando rápido /atane info").click(ClickEvent.Action.RUN_COMMAND, "/atane info").then(" §fsobre a última limpeza. \n").send(player);
+            });
         });
         IntStream.of(5, 4, 3, 2, 1).filter(i -> controller.getTimer() == i).forEach(i -> {
-            for (Player player : Bukkit.getOnlinePlayers()) {
-                sendMessage.sendMessageWithSound(player, "§cLimpando em " + controller.getTimer() + " segundos.");
-            }
+            Bukkit.getOnlinePlayers().forEach(player -> player.sendMessage("§cLimpando em " + controller.getTimer() + " segundos."));
         });
         controller.reduceTimer();
     }

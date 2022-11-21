@@ -33,7 +33,7 @@ public class ClearDrops {
         SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
         this.data = format.format(now);
-        this.hora = simpleDateFormat.format(now);
+        ClearDrops.hora = simpleDateFormat.format(now);
     }
 
     public String getData() {
