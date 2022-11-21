@@ -20,7 +20,7 @@ public class ClearDropsCommand extends BaseCommand {
     public void onCommand(Player player, String[] args) {
         if (args.length >= 0) {
             World world = player.getWorld();
-            world.getEntities().stream().filter(Item.class::isInstance).forEachOrdered(item -> {
+            world.getEntities().stream().filter(Item.class::isInstance).forEach(item -> {
                 drops++;
                 item.remove();
             });

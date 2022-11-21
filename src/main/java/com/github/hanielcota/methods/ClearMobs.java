@@ -12,7 +12,7 @@ public class ClearMobs {
 
     public ClearMobs(Player player) {
         World world = Bukkit.getWorld(player.getWorld().getName());
-        world.getEntities().stream().filter(entity -> !(entity instanceof Player)).forEachOrdered(entity -> {
+        world.getEntities().stream().filter(entity -> !(entity instanceof Player)).forEach(entity -> {
             mobsAlive++;
             entity.remove();
         });

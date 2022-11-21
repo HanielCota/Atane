@@ -1,39 +1,44 @@
 package com.github.hanielcota.inventory;
 
-import com.github.hanielcota.methods.ClearDrops;
+import com.github.hanielcota.Main;
 import com.github.hanielcota.misc.ItemBuilder;
+import lombok.AllArgsConstructor;
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 
+@AllArgsConstructor
 public class AtaneInventory implements InventoryHolder {
 
     private final Inventory inv;
+    private Main plugin;
 
-    public AtaneInventory() {
+    public AtaneInventory(Main plugin) {
+        this.plugin = plugin;
         inv = Bukkit.createInventory(this, 3 * 9, "Info da Atane");
-        init();
+        init(plugin);
     }
 
-    private void init() {
-        if (ClearDrops.data == null) {
-            ItemStack notcleanyet = new ItemBuilder(AtaneHead.HEAD.toString())
+
+    private void init(Main plugin) {
+        if (plugin.getClearDrops().getHora() == null) {
+            ItemStack notClean = new ItemBuilder(AtaneHead.HEAD.toString())
                     .setAmount(1)
                     .setName("§aAtane")
-                    .setLore("§cAinda não fiz nenhuma limpeza...")
+                    .setLore("§cAinda não executamos uma limpeza...")
                     .build();
-            inv.setItem(13, notcleanyet);
+            inv.setItem(13, notClean);
         } else {
             ItemStack stack = new ItemBuilder(AtaneHead.HEAD.toString())
                     .setAmount(1)
                     .setName("§aAtane")
-                    .setLore("§fÚltima limpeza: §e" + ClearDrops.drops + " removidos.", "§fData: §a" + ClearDrops.data, "§fHora: §a" + ClearDrops.hora)
+                    .setLore("§fÚltima limpeza: §e" + plugin.getClearDrops().getValueDrops() + " removidos.", "§fData: §a" + plugin.getClearDrops().getData(), "§fHora: §a" + plugin.getClearDrops().getHora())
                     .build();
-
             inv.setItem(13, stack);
         }
     }
+
 
     @Override
     public Inventory getInventory() {

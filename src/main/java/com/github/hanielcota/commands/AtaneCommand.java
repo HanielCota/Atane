@@ -1,10 +1,8 @@
 package com.github.hanielcota.commands;
 
 import co.aikar.commands.BaseCommand;
-import co.aikar.commands.annotation.CommandAlias;
-import co.aikar.commands.annotation.CommandPermission;
-import co.aikar.commands.annotation.Default;
-import co.aikar.commands.annotation.Subcommand;
+import co.aikar.commands.annotation.*;
+import com.github.hanielcota.Main;
 import com.github.hanielcota.inventory.AtaneInventory;
 import com.github.hanielcota.misc.ClickMessage;
 import net.md_5.bungee.api.chat.ClickEvent;
@@ -13,6 +11,9 @@ import org.bukkit.entity.Player;
 @CommandPermission("atane.op")
 @CommandAlias("atane")
 public class AtaneCommand extends BaseCommand {
+
+    @Dependency
+    Main plugin;
 
     @Default
     private void onCommand(Player player, String[] args) {
@@ -27,7 +28,7 @@ public class AtaneCommand extends BaseCommand {
 
     @Subcommand("info")
     private void ataneInfo(Player player) {
-        AtaneInventory ataneInventory = new AtaneInventory();
+        AtaneInventory ataneInventory = new AtaneInventory(plugin);
         player.openInventory(ataneInventory.getInventory());
 
     }
