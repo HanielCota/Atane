@@ -2,7 +2,7 @@ package com.github.hanielcota.methods;
 
 import co.aikar.commands.Locales;
 import co.aikar.commands.PaperCommandManager;
-import com.github.hanielcota.Main;
+import com.github.hanielcota.Atane;
 import com.github.hanielcota.commands.AtaneCommand;
 import com.github.hanielcota.commands.ClearDropsCommand;
 import com.github.hanielcota.commands.ClearMobsCommand;
@@ -11,9 +11,9 @@ import lombok.val;
 
 import java.util.logging.Level;
 
-public class RegisterCommands {
+public class CommandManager {
 
-    public RegisterCommands(Main plugin) {
+    public CommandManager(Atane plugin) {
         val logger = plugin.getLogger();
         try {
             PaperCommandManager manager = new PaperCommandManager(plugin);

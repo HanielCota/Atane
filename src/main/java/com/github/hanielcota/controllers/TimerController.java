@@ -1,6 +1,6 @@
 package com.github.hanielcota.controllers;
 
-import com.github.hanielcota.methods.ClearDrops;
+import com.github.hanielcota.misc.ClearDrops;
 import org.bukkit.Bukkit;
 
 import java.util.logging.Level;

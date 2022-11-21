@@ -1,6 +1,6 @@
 package com.github.hanielcota.inventory;
 
-import com.github.hanielcota.Main;
+import com.github.hanielcota.Atane;
 import com.github.hanielcota.misc.ItemBuilder;
 import lombok.AllArgsConstructor;
 import org.bukkit.Bukkit;
@@ -12,16 +12,16 @@ import org.bukkit.inventory.ItemStack;
 public class AtaneInventory implements InventoryHolder {
 
     private final Inventory inv;
-    private Main plugin;
+    private Atane plugin;
 
-    public AtaneInventory(Main plugin) {
+    public AtaneInventory(Atane plugin) {
         this.plugin = plugin;
         inv = Bukkit.createInventory(this, 3 * 9, "Info da Atane");
         init(plugin);
     }
 
 
-    private void init(Main plugin) {
+    private void init(Atane plugin) {
         if (plugin.getClearDrops().getHora() == null) {
             ItemStack notClean = new ItemBuilder(AtaneHead.HEAD.toString())
                     .setAmount(1)

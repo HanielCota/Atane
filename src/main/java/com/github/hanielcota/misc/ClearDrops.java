@@ -1,4 +1,4 @@
-package com.github.hanielcota.methods;
+package com.github.hanielcota.misc;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Effect;
@@ -32,7 +32,7 @@ public class ClearDrops {
         Date now = new Date();
         SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
-        this.data = format.format(now);
+        data = format.format(now);
         ClearDrops.hora = simpleDateFormat.format(now);
     }
 

@@ -1,4 +1,4 @@
-package com.github.hanielcota.methods;
+package com.github.hanielcota.misc;
 
 import org.bukkit.Bukkit;
 import org.bukkit.World;

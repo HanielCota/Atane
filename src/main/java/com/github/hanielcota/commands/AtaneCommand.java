@@ -2,7 +2,7 @@ package com.github.hanielcota.commands;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.*;
-import com.github.hanielcota.Main;
+import com.github.hanielcota.Atane;
 import com.github.hanielcota.inventory.AtaneInventory;
 import com.github.hanielcota.misc.ClickMessage;
 import net.md_5.bungee.api.chat.ClickEvent;
@@ -13,7 +13,7 @@ import org.bukkit.entity.Player;
 public class AtaneCommand extends BaseCommand {
 
     @Dependency
-    Main plugin;
+    Atane plugin;
 
     @Default
     private void onCommand(Player player, String[] args) {
