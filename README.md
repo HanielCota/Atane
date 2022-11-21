@@ -10,7 +10,7 @@
 <h4 align="center">Plugin for minecraft server in order to optimize your server<a href="http:/ankares.com" target="_blank"> Atane</a>.</h4>
 
 <p align="center">
-  <a href="https://www.paypal.me/HanielFialho">
+  <a href="https://www.paypal.com/HanielFialho">
     <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
   </a>
 </p>
