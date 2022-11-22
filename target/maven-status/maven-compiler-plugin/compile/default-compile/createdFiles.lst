@@ -1,3 +1,4 @@
+com\github\hanielcota\misc\MessageUtils.class
 com\github\hanielcota\misc\ClearMobs.class
 com\github\hanielcota\runnable\AsyncRunnable.class
 com\github\hanielcota\Atane.class
@@ -11,7 +12,6 @@ com\github\hanielcota\listeners\BlockNaturalSpawnListener.class
 com\github\hanielcota\misc\ClearDrops.class
 com\github\hanielcota\misc\ItemBuilder.class
 com\github\hanielcota\commands\ClearMobsCommand.class
-com\github\hanielcota\misc\sendMessage.class
 com\github\hanielcota\commands\ClearDropsCommand.class
 com\github\hanielcota\listeners\BlockNaturalSpawnListener$1.class
 com\github\hanielcota\misc\MessagePart.class

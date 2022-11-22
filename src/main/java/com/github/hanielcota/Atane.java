@@ -21,7 +21,7 @@ public class Atane extends JavaPlugin {
         this.clearDrops = new ClearDrops();
         getLogger().log(Level.INFO, () -> "§aAtane is load successful! ");
         new CommandManager(this);
-        initListeners();
+        registerListeners();
         new AsyncRunnable().runTaskTimerAsynchronously(this, 0, 20);
     }
 
@@ -30,7 +30,7 @@ public class Atane extends JavaPlugin {
         getLogger().log(Level.SEVERE, () -> "§cAtane is disabled...");
     }
 
-    private void initListeners() {
+    private void registerListeners() {
         Bukkit.getPluginManager().registerEvents(new AtaneListener(), this);
         Bukkit.getPluginManager().registerEvents(new BlockNaturalSpawnListener(), this);
         getLogger().log(Level.INFO, () -> "§awere registered successful listeners!");

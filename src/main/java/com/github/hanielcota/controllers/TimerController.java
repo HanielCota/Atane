@@ -12,14 +12,13 @@ public class TimerController {
         return timer;
     }
 
-    public TimerController reduceTimer() {
+    public void reduceTimer() {
         this.timer--;
         if (timer == 0) {
             this.timer = 420;
             Bukkit.getLogger().log(Level.INFO, () -> "§aAtane is performing a cleanup on the server.");
             new ClearDrops().clear();
         }
-        return this;
     }
 
     public TimerController printValue() {

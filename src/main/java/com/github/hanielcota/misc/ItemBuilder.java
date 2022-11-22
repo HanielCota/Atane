@@ -20,6 +20,7 @@ import java.lang.reflect.Field;
 import java.util.*;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("deprecation")
 public class ItemBuilder {
 
     private final ItemStack is;
@@ -56,7 +57,8 @@ public class ItemBuilder {
     }
 
     @Override
-    public ItemBuilder clone() {
+    public ItemBuilder clone() throws CloneNotSupportedException {
+        ItemBuilder itemBuilder = (ItemBuilder) super.clone();
         return new ItemBuilder(is);
 
     }
@@ -131,7 +133,7 @@ public class ItemBuilder {
             is.setItemMeta(im);
             is.setDurability((short) 3);
 
-        } catch (ClassCastException expected) {
+        } catch (ClassCastException ignored) {
         }
 
         return this;
@@ -345,18 +347,18 @@ public class ItemBuilder {
 
             is.setItemMeta(im);
 
-        } catch (ClassCastException expected) {
+        } catch (ClassCastException ignored) {
         }
 
         return this;
 
     }
 
-    public ItemBuilder setSkull(String url) {
+    public void setSkull(String url) {
         SkullMeta headMeta = (SkullMeta) is.getItemMeta();
         if (cacheSkull.containsKey(url)) {
             is.setItemMeta(cacheSkull.get(url));
-            return this;
+            return;
         }
         GameProfile profile = new GameProfile(UUID.randomUUID(), null);
         profile.getProperties().put("textures", new Property("textures", url));
@@ -366,11 +368,10 @@ public class ItemBuilder {
             profileField.setAccessible(true);
             profileField.set(headMeta, profile);
         } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ignored) {
-            return this;
+            return;
         }
         is.setItemMeta(headMeta);
         cacheSkull.put(url, headMeta);
-        return this;
     }
 
     public ItemStack build() {
