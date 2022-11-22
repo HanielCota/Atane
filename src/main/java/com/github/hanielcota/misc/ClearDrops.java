@@ -24,7 +24,7 @@ public class ClearDrops {
         });
         Bukkit.getOnlinePlayers().forEach(player -> {
             player.sendMessage("§eCalculamos um total de " + drops + " itens removidos pelo mundo.");
-            player.playSound(player.getLocation(), Sound.EXPLODE, 5, 5);
+            player.playSound(player.getLocation(), Sound.CAT_MEOW, 5, 5);
         });
     }
 

@@ -1,16 +1,16 @@
-com\github\hanielcota\Main.class
+com\github\hanielcota\misc\ClearMobs.class
 com\github\hanielcota\runnable\AsyncRunnable.class
+com\github\hanielcota\Atane.class
 com\github\hanielcota\controllers\TimerControllerBuilder.class
 com\github\hanielcota\inventory\AtaneHead.class
-com\github\hanielcota\methods\ClearMobs.class
+com\github\hanielcota\methods\CommandManager.class
 com\github\hanielcota\commands\AtaneCommand.class
 com\github\hanielcota\misc\ClickMessage.class
 com\github\hanielcota\controllers\TimerController.class
-com\github\hanielcota\methods\RegisterListeners.class
 com\github\hanielcota\listeners\BlockNaturalSpawnListener.class
+com\github\hanielcota\misc\ClearDrops.class
 com\github\hanielcota\misc\ItemBuilder.class
 com\github\hanielcota\commands\ClearMobsCommand.class
-com\github\hanielcota\methods\RegisterCommands.class
 com\github\hanielcota\misc\sendMessage.class
 com\github\hanielcota\commands\ClearDropsCommand.class
 com\github\hanielcota\listeners\BlockNaturalSpawnListener$1.class
@@ -19,4 +19,3 @@ com\github\hanielcota\commands\TpsCommand.class
 com\github\hanielcota\inventory\AtaneInventory.class
 com\github\hanielcota\misc\TimeUtils.class
 com\github\hanielcota\inventory\AtaneListener.class
-com\github\hanielcota\methods\ClearDrops.class
