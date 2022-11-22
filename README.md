@@ -7,7 +7,7 @@
   <br>
 </h1>
 
-<h4 align="center">Atane was made by Ankares.com for minecraft servers to optimize them. With the help of Athena, your server will be able to handle multiple players at the same time, resulting in smoother gameplay.<a href="http:/ankares.com" target="_blank"> Atane</a>.</h4>
+<h4 align="center">Atane was made by Ankares.com for minecraft servers to optimize them. With the help of Athena, your server will be able to handle multiple players at the same time, resulting in smoother gameplay.</h4>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
