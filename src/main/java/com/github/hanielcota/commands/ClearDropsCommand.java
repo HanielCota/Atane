@@ -8,7 +8,7 @@ import org.bukkit.World;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 
-import static com.github.hanielcota.misc.sendMessage.sendMessageWithSound;
+import static com.github.hanielcota.misc.MessageUtils.sendMessageWithSound;
 
 @CommandPermission("atane.op")
 @CommandAlias("cleardrops")
