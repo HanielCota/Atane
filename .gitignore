@@ -9,7 +9,8 @@
 out/
 # mpeltonen/sbt-idea plugin
 .idea_modules/
-
+.idea/
+target/
 # Created by https://www.toptal.com/developers/gitignore/api/java
 # Edit at https://www.toptal.com/developers/gitignore?templates=java
 
@@ -155,4 +156,5 @@ fabric.properties
 # https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
 .idea/**/azureSettings.xml
 
+target/
 # End of https://www.toptal.com/developers/gitignore/api/intellijAtane\

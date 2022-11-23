@@ -34,7 +34,7 @@
                 <configuration>
                     <dependencyReducedPomLocation>${project.build.directory}/dependency-reduced-pom.xml
                     </dependencyReducedPomLocation>
-                    <outputFile>D:\Ankares\plugins\Atane.jar</outputFile>
+                    <outputFile>D:\TrashCodes\Ankares\plugins\Atane.jar</outputFile>
                     <relocations>
                         <relocation>
                             <pattern>co.aikar.commands</pattern>
